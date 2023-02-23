@@ -20,3 +20,13 @@ class TestClass:
 
         assert resultado == esperado
 
+    def test_quando_salario_100000_deve_retornar_90000(self):
+        entrada = 100000
+        esperado = 90000
+
+        diretor = Funcionario('Paulo Bragança', '11/10/2000', entrada)
+        diretor.decrescimo_salario()
+        resultado = diretor.salario
+
+        assert resultado == esperado
+
