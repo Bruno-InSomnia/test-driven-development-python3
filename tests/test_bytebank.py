@@ -51,3 +51,12 @@ class TestClass:
             resultado = ana_rica.calcular_bonus()
 
             assert resultado
+
+    def test_retorno_str(self):
+        nome, data_nasc, salario = 'Teste', '12/12/2000', 1000
+        esperado = f'Funcionario(Teste, 12/12/2000, 1000)'
+
+        ana = Funcionario(nome, data_nasc, salario)
+        resultado = ana.__str__()
+
+        assert resultado == esperado
